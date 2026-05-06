@@ -10,6 +10,15 @@ Se usa para aplicar estilos de manera selectiva a elementos en documentos HTML
 2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
 
 
+* Selector: le dice al navegador qué parte del documento se verá afectada por esa regla.
+Ejemplo: en h1 { color: red; } el selector es h1. Los selectores pueden aparecer individualmente o agrupados separándolos
+con comas: h1, h2, h3 { color: red; }
+* Propiedad: especifica qué aspecto se va a cambiar (por ejemplo color).
+* Valor: establece el valor de la propiedad (por ejemplo red). 
+Si está formado por más de una palabra, hay que ponerlo entre comillas: p { font-family: "sans serif"; }
+
+Las propiedades de un mismo selector se agrupan pero se separa cada una con punto y coma: p { text-align: center; color: red; }
+
 
 3. ¿ Cuáles son las tres formas de dar estilo a un documento?
 
@@ -20,6 +29,83 @@ Podemos asociar las reglas de estilo a las marcas HTML de tres maneras:
 
 4. ¿ Cuáles son los distintos tipos de selectores más utilizados?
 Ejemplifique cada uno.
+
+a) Selectores de tipos
+Son los que identifican a un tipo de elemento dentro de los que conforman el código HTML. 
+Usan la misma palabra que la etiqueta sin los signos < y >. 
+
+Ej: H1 { text-align: center }
+
+b) Selectores de clases
+El selector de clases consta de un punto (.) seguido por el nombre de la clase.
+ Se pueden crear clases específicas para un elemento o clases genéricas aplicables a cualquier elemento. 
+ 
+Ej:
+
+ /* Clase específica para párrafos */
+P.pregunta { font-weight: bold; font-style: italic }
+
+/* Clase genérica para cualquier elemento */
+.contraste { color: #FFFF00; background-color: #000000 }
+
+En el HTML se usa así: <P CLASS="pregunta">texto</P>
+
+c) Selectores de ID
+Los selectores de ID funcionan de manera similar a los de clases, pero solo pueden aplicarse a un elemento de la página. 
+La sintaxis usa el carácter numeral (#) en lugar del punto. 
+
+Ej:
+
+#titulo1 { text-align: center }
+#volanta { font-style: italic }
+
+d) Selectores de atributos
+Permiten seleccionar elementos de la página según sus propiedades o el valor asignado a estas propiedades. 
+
+Ej:
+
+P[CLASS] { margin-left: 1cm }
+P[CLASS="pregunta"] { margin-left: 1cm }
+
+e) Selector universal
+Se escribe con un asterisco (*) y representa a cualquier elemento de la página. sdar
+
+Ej: *{ color: red }
+
 5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+En HTML, los hipervínculos se crean con elementos <a>, por lo que para especificar el color, necesitamos añadir una regla de estilo para "a". 
+Para diferenciar los enlaces visitados de los no visitados, CSS proporciona dos "pseudo-classes" (:link y :visited).
+ Se llaman “pseudo-classes” para distinguirlas de los atributos de clase, que aparecen directamente en HTML, por ejemplo, class="navbar".
+
 6. ¿ Qué es la herencia?
+
+Cada página HTML está compuesta por una serie de elementos (títulos, párrafos, listas, tablas, etc.) 
+organizados en una estructura donde cada elemento está contenido por otro elemento, que a su vez puede estar contenido por otro.
+
+En esta estructura existe un elemento raíz que es el que actúa de contenedor de todos los demás elementos.
+ En HTML se puede considerar como elemento raíz al elemento <BODY> o al elemento <HTML>.
+
+La importancia de este hecho es que cada elemento hereda las propiedades del elemento que lo contiene 
+(llamado el elemento padre). Quiere decir que si especificamos la propiedad color: red para <BODY>, todos los elementos de la página heredarán esta característica y no será necesario especificar nuevamente la propiedad color en cada uno de ellos.
+
+Aquí es necesario hacer algunas precisiones:
+
+No todas las propiedades son hereditables y para cada propiedad se define si ésta se hereda o no.
+El valor inherit puede aplicarse a cualquier propiedad de los elementos. Este valor puede usarse para reforzar explícitamente la herencia de una propiedad o para lograr que un elemento herede de su padre una propiedad que de otro modo no sería heredada.
+Cuando se asigna una propiedad a un elemento, el valor especificado reemplaza al valor heredado.
+Los elementos heredan los valores computados del padre, no los valores especificados (en el siguiente punto esto se explica más detalladamente).
+Hemos mencionado que un elemento que contiene a otro es llamado padre y, previsiblemente, al elemento contenido se le llama hijo. Existen otras relaciones que se usan en la definición de los selectores:
+
+Descendiente
+un elemento (A) de descendiente de otro (B) cuando (B) es padre de (A) o cuando (B) es padre de otro elemento que a su vez es padre de (A).
+Antepasado
+un elemento (A) es antepasado de otro (B) cuando (B) es su descendiente.
+Hermano
+un elemento es hermano de otro cuando ambos comparten el mismo padre.
+
+
 7. ¿ En qué consiste el proceso denominado cascada?
+
+La cascada consiste en la posibilidad de vincular hojas de estilo y crear una jerarquía de hojas de estilo relacionadas.
+Los estilos definidos en cada hoja se van sumando para finalmente ser volcados a la página
