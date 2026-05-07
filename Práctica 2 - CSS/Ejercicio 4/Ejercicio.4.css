@@ -1,0 +1,37 @@
+/*Declara que todos los elementos tenga el color de texto verde*/
+* {
+  color: green;
+}
+
+/*Declara que todos lo hipervinculos que todavía no fueron visitados sean de color gris*/ 
+a:link {
+  color: gray
+}
+
+/*Declara que todos lo hipervinculos que todavía YA fueron visitados sean de color azul*/
+a:visited {
+  color: blue
+}
+
+/*Declara que cuando el usuario pase el mouse por encima del hipervinculos el texto sea rosa*/
+a:hover {
+  color: fuchsia
+}
+
+/*Declara que cuando el usuario esta haciendo click en el hipervinculo, texto será de color rojo*/ 
+a:active {
+  color: red
+}
+
+/*Declara que todos los parrafos tendran una letra arial con fuente helvica, tamaño 10px, y de color negro*/
+p {
+  font-family: arial, helvetica;
+  font-size: 10px;
+  color: black;
+}
+
+/*Declara que todos los elementos con id='contenido', tendran un tamaño de 14px, y la letra será negrita*/
+.contenido {
+  font-size: 14px;
+  font-weight: bold;
+}
