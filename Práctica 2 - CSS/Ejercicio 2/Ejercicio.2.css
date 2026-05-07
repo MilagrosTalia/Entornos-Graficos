@@ -1,0 +1,22 @@
+  
+  /* Declara que el párrafo con id="normal" tendrá fuente arial/helvetica,
+  tamaño 11px y negrita.*/
+
+  p#normal {
+  font-family: arial,helvetica;
+  font-size: 11px;
+  font-weight: bold;
+  }
+
+ /* Declara todos los elecmentos con id="destacado" tendrá un borde color azul de 2px*/
+  *#destacado {
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  }
+
+/* Declara que todos los elementos con id="distinto" tendrá un fondo color celeste y las letras/texto será rojo */
+  #distinto {
+  background-color: #9EC7EB;
+  color: red;
+  }

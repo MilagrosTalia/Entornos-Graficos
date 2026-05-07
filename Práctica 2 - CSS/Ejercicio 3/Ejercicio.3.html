@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Ejercicio.3.css">
+</head>
+<body>
+
+<!--Aplica la regla desarrollo , por eso la letra se achica a 8px-->
+  <p class="desarrollo">
+    En este primer párrafo trataremos lo siguiente:
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+  </p>
+
+<!-- Aplica la regla 'quitar' al parrafo, por eso el texto tiene color rojo-->
+  <p class="quitar">
+    Este párrafo debe ser quitado de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+  </p>
+
+<!--Este parrafo no aplica ninguna regla de estilo css-->
+  <p>
+    En este otro párrafo trataremos otro tema:<br />
+    xxxxxxxxxxxxxxxxxxxxxxxxx
+  </p>
+
+<!--Aplica la regla 'importante' al parrafo, por esto se agranda la letra a 20px-->
+  <p class="importante">
+    Y este es el párrafo más importante de la obra…
+    <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+    </p>
+
+<!--No aplica ninguna regla de estilo porque en el archivo css esta determinado que la regla 'quitar' 
+se aplique solo a parrafos'-->
+  <h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+
+<!--Aplica la regla quitar y la regla importante, por eso se aplica al texto el color rojo y se agranda la letra a 20px-->
+  <p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
+</body>
+</html>

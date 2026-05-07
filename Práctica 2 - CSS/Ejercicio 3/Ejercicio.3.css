@@ -1,0 +1,16 @@
+
+/* Declara que todos los parrafos con id= 'quitar' tendrán su texto de color rojo*/ 
+p.quitar {
+  color: red;
+}
+
+
+/* Declara que todos los elementos con id="desarrollo" tendrán un tamaño de 8px */
+*.desarrollo {
+  font-size: 8px;
+}
+
+/* Declara que todos los elementos con id="importante" tendra un tamaño de 20px */ 
+.importante {
+  font-size: 20px;
+}
