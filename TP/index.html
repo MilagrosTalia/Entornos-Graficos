@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="CSSs/index.css">
+  
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,6 +16,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="CSSs/index.css">
+  
   <title>Document</title>
 </head>
 <body>
@@ -38,14 +40,66 @@
           </li>
         </ul>
       </div>
-    </div>
-
-
-    
+    </div>    
   </nav>
 <hr>
+
+<!-- Imagen -->
+
 <div>
   <img src="Imagenes/vuelo.png" class="w-100" alt="...">
 </div>
+
+<!-- Seleccion Vuelos -->
+
+<form action="/resultados" method="GET" class="card-body p-0">
+  <div class="row g-0 align-items-end">
+
+    <div class="col field-group px-3 py-3">
+      <label for="origen" class="form-label text-muted"
+        style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">Origen</label>
+      <input type="text" id="origen" name="origen" class="form-control border-0 shadow-none p-0"
+        placeholder="Buenos Aires (EZE)" required>
+    </div>
+
+    <div class="col field-group px-3 py-3">
+      <label for="destino" class="form-label text-muted"
+        style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">Destino</label>
+      <input type="text" id="destino" name="destino" class="form-control border-0 shadow-none p-0"
+        placeholder="¿A dónde vas?" required>
+    </div>
+
+    <div class="col field-group px-3 py-3">
+      <label for="ida" class="form-label text-muted"
+        style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">Ida</label>
+      <input type="date" id="ida" name="ida" class="form-control border-0 shadow-none p-0" required>
+    </div>
+
+    <div class="col field-group px-3 py-3">
+      <label for="vuelta" class="form-label text-muted"
+        style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">Vuelta (opcional)</label>
+      <input type="date" id="vuelta" name="vuelta" class="form-control border-0 shadow-none p-0">
+    </div>
+
+    <div class="col field-group px-3 py-3">
+      <label for="pasajeros" class="form-label text-muted"
+        style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;">Pasajeros</label>
+      <select id="pasajeros" name="pasajeros" class="form-select border-0 shadow-none p-0">
+        <option value="1">1 pasajero</option>
+        <option value="2">2 pasajeros</option>
+        <option value="3">3 pasajeros</option>
+        <option value="4">4 pasajeros</option>
+      </select>
+    </div>
+
+    <div class="col-auto px-3 py-3">
+      <button type="submit" class="btn btn-search text-white">Buscar vuelos</button>
+    </div>
+
+  </div>
+</form>
+
+
+
 </body>
 </html>

@@ -1,3 +1,34 @@
 .nav-link {
   color: black;
 }
+
+.flight-card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.flight-header {
+  background: #7c3aed;
+  border-radius: 16px 16px 0 0;
+}
+
+.field-group {
+  border-right: 1px solid #e5e7eb;
+}
+
+.field-group:last-of-type {
+  border-right: none;
+}
+
+.btn-search {
+  background: #7c3aed;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+.btn-search:hover {
+  background: #5b21b6;
+}
