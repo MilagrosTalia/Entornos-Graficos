@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Bienvenido</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Bienvenidos.css">
+  </head>
+  <body>
+    <h1>Bienvenidos</h1>
+    <form action="Bienvenido.php" method="post" text-align="rigth">
+      <table>
+          <tr>
+            <td><label>Nombre:</label></td>
+            <td><input type="text" name='nombre' required></td>
+          </tr>
+
+          <tr>
+            <td><label>Email:</label></td>
+            <td><input type="text" name="email" required></td>
+          </tr>
+
+          <tr>
+            <td><label>Nombre Producto:</label></td>
+            <td><input type="text" name="producto" required></td>
+          </tr>
+
+          <tr>
+            <td><label>Mes</label></td>
+            <td><select name="mes" id="mes" required>
+              <option value="1">Enero</option>
+              <option value="2">Febrero</option>
+              <option value="3">Marzo</option>
+              <option value="4">Abril</option>
+            </select></td>
+          </tr>
+
+          <tr>
+            <td><label>Cantidad:</label></td>
+            <td><input type="number" name="cantidad" required></td>
+          </tr>
+          
+          <tr>
+            <td><input type="checkbox" name="terminos" id="terminos" required></td>
+            <td><label>Acepta los Terminos y condiciones</label></td>
+          </tr>
+        </table>
+        
+        <button>Enviar</button>
+    </form>
+  </body>
+</html>

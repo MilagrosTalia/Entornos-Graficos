@@ -12,7 +12,7 @@
 
 
   <!-- Tenemos un parrafo que contiene dos elementos, una imagen y un hiperenlaces INDEPENDIENTES;-->
-  <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+  <p><img src="lo1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
  
   <!-- Tenemos un parrafo que contiene un hiperenlace y texto;
   El hiperenlace contiene una imagen;
@@ -32,3 +32,25 @@
 
 </body>
 </html>
+
+
+<?php 
+
+$CONEXION = MYSQLI_CONNECT ('LOCALHOST', 'USUARIO', 'CONTRASEÑA' , 'RUB') 
+
+if (!empty ($nombre)) {
+  $consulta = "INSERT INTO PERSONA ('NOMBRE')
+              VALUES ($NOMBRE)"; 
+  MYSQLI_QUERY($CONEXION,$CONSULTA) 
+
+  ECHO 'lA PERSONA SE DIO DE ALTA CON SU NOMBRE';
+
+  MYSQLI_CLOSER($CONEXION);
+}
+
+session_start()
+
+$array = [nombre -> $nombre, fecha -> $fecha ] 
+
+$session = $array 
+

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Documento</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <style>
+    body {display: flex;}
+    
+  </style>
+  <body>
+    <form action="alta.php" method="post">
+      <table>
+        <tr>
+          <td>Ciudades:</td>
+          <td><input type="text" name="ciudad"></td>
+        </tr>
+
+        <tr>
+          <td>País:</td>
+          <td><input type="text" name="pais"></td>
+        </tr>
+        <tr>
+          <td>Habitantes:</td>
+          <td><input type="number" name="habitantes"></td>
+        </tr>
+
+        <tr>
+          <td>Superficie</td>
+          <td><input type="number" step="0.1" name="superficie"></td>
+        </tr>
+
+        <tr>
+          <td>Tiene Metro?</td>
+          <td><select name="metro" id="metro">
+            <option value="1">1</option>
+            <option value="0">0</option>
+          </select></td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="submit" value="Guardar Ciudad">
+          </td>
+        </tr>
+        
+
+      </table> 
+    </form>
+  </body>
+
+</html>

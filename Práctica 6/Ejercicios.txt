@@ -1,0 +1,31 @@
+Ejercicio 1: Completar Manejo de Bases de Datos con PHP   
+ 
+Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, 
+es necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función:
+ MYSQLI_CONNECT()
+  
+Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios: 
+ $HOSTNAME ,$NOMBREUSUARIO , $CONTRASEÑA
+ 
+Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función:
+  MYSQLI_SELECT_DB()
+
+Esta función debe pasar como parámetro  
+  $NOMBRECONEXION, $NOMBREBASE
+
+La función mysqli_query () se utiliza para:
+ EJECUTAR UNA CONSULTA y requiere como parámetros  $NOMBRECONEXION, 'CONSULTA' . 
+ 
+La cláusula or die() se utiliza para:
+  DETENER LA EJECUCION DEL SCRIPT EN CASO DE QUE OCURRA UN ERROR, MOSTRANDO UN MENSAJE AL USUARIO 
+y la función mysqli_error () se puede usar para 
+  OBTENER EL MENSAJE DEL ULTIMO ERROR GENERADO POR MYSQLI, PERMITIENDO SABER QUE FALLOR REALMENTE EN LA OPERACION
+
+Ejercicio 2 
+
+1ero La sentencia while recorre el resultado de una consulta llamada $vResultado, leyendo fila por fila
+2do Cada $fila[0], $fila[1], $fila[2] es una columna de esa fila de la base de datos.
+3ero Luego el colpsan combina 5 filas
+4to free_result libera el espacio en memoria que no necesitas
+5to Cierra el contacto con la base de datos
+
